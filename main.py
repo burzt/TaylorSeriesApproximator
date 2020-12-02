@@ -29,21 +29,21 @@ def factorial(n):
 
 # Function for calculating Taylor series approximation of a given function
 def taylor(function, x):
+  sum = 0
+  allowedError = 0.00000001
+  # Note: '**' denotes exponential in Python
   if(function == 'sin(x)'):
-    sum = 0
-    n = 6            # test different values for n, could automate this out later
+    n = 6   #TODO: programatically find n
     for k in range(n):
-      sum += (-1)**k * ((x**((2*k)+1))/factorial((2*k)+1))  # '**' denotes exponential in Python
+      sum += (-1)**k * ((x**((2*k)+1))/factorial((2*k)+1))
     return sum
   if(function == 'cos(x)'):
-    sum = 0
-    n = 4
+    n = 6
     for k in range(n):
       sum += ((-1)**k / factorial(2*k)) * x**(2*k)
     return sum
   if(function == 'e^x'):
-    sum = 0
-    n = 4
+    n = 8
     for k in range(n):
       sum += x**k/factorial(k)
     return sum
@@ -59,6 +59,7 @@ def errorChecker(function, x, myApprox):
   if(function == 'e^x'):
     realValue = math.exp(x)
   errorValue = abs(realValue - myApprox)  # take absolute value of difference
+  #return errorValue
 
   # Ensure accuracy is appropriate
   allowedError = 0.00000001
