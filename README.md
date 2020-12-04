@@ -4,7 +4,7 @@ TaylorApprox is a Python program for estimating values of functions using Taylor
 Go to the link: [on Replit](https://repl.it/@Spez/TaylorSeriesApproximator) and click ```Run``` on the top
 
 ## Information
-Authors: Ciana, Zohair, Aaron, Mateo  
+Authors: Aaron, Zohair, Mateo, Ciana
 F1 - Optional Project  
 MATH 2472  
 12/04/2020
